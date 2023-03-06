@@ -1,14 +1,14 @@
-import pandas as pd
-import numpy as np
 import stramlit as st
+from src import load_data
 
-def loas_data():
-    return pd.read_csv('data/processed/bokes_completed.csv')
+st.set_page_config(layout='wide')
 
 def main():
-    df = loas_data()
+    df = load_data()
     
     st.dataframe(df)
 
 if __name__ == '__main__':
     main()
+
+
